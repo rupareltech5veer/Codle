@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="mode1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codle</title>
+</head>
+<body>
+    <h1 id="title">CODLE Word Guess</h1>
+    <hr id="divider">
+    <div id="emptySpace"></div>
+    <div id="infoPopup">
+        <h1 id="infoTitle">HOW TO PLAY</h1>
+        <div id="ex1">
+            <div class="blankCell" id="diffColor">H</div>
+            <div class="blankCell" id="normalColor">I</div>
+            <div class="blankCell" id="normalColor">P</div>
+            <h1 id="colorInfo">The pink square means that the letter is in the word, but in the wrong spot!</h1>
+        </div>
+        <div id="ex2">
+            <div class="blankCell" id="normalColor">C</div>
+            <div class="blankCell" id="diffColor">O</div>
+            <div class="blankCell" id="normalColor">W</div>
+            <h1 id="colorInfo">The Green square means that the letter is in the word, and in the right spot!</h1>
+        </div>
+        <div id="ex3">
+            <div class="blankCell" id="normalColor">T</div>
+            <div class="blankCell" id="normalColor">A</div>
+            <div class="blankCell" id="diffColor">P</div>
+            <h1 id="colorInfo">The Grey square means that the letter is not in the word!</h1>
+        </div>
+    </div>
+    <div id="confettiHolder"></div>
+    <!-- <img id="confettiGif" src="confettiPNG.gif" alt="confetti"> -->
+    <div id="winLosePopup">
+        <h1 id="winMsg"></h1>
+        <h1 id="winWord"></h1>
+        <div id="winStats"></div>
+    </div>
+    <div class="contentWrapper">
+        <div id="wordBoxHead">
+            <h1 id="wordBoxTitle">5 Letter Words</h1>
+            <!-- <div id="wordBoxBtnSpan"><button class="wordBoxBtn" id="add">+</button></div>&nbsp;&nbsp;<span><div id="wordBoxBtnSpan"><button class="wordBoxBtn" id="minus">−</button></div></span> -->
+            &nbsp;&nbsp;&nbsp;<div class="wordBoxBtn" id="add">+</div>
+            &nbsp;<div class="wordBoxBtn" id="minus">−</div>
+        </div>
+        <div class="wordBox" id="wordBox">
+            <div id="invalidPopup"></div>
+    
+            <!--<div class="box" id="box1">
+                <input type="text" id="blank1" name="blank1" pattern="[A-Za-z]" maxlength="1">
+            </div>
+            <div class="box" id="box2">
+            </div>
+            <div class="box" id="box3">L</div>
+            <div class="box" id="box4">L</div>
+            <div class="box" id="box5">O</div> -->
+    
+            <!-- <input type="text" id="blanks" name="set1" pattern="[A-Za-z]" maxlength="1" disabled="true">
+            <input type="text" id="blanks" name="set1" pattern="[A-Za-z]" maxlength="1">
+            <input type="text" id="blanks" name="set1" pattern="[A-Za-z]" maxlength="1">
+            <input type="text" id="blanks" name="set1" pattern="[A-Za-z]" maxlength="1">
+            <input type="text" id="blanks" name="set1" pattern="[A-Za-z]" maxlength="1"> -->
+    
+        </div>
+    </div>
+    
+    <div id="keyboard">
+        <div id="container1">
+            <div class="letter" id="alphabet">Q</div>
+            <div class="letter" id="alphabet">W</div>
+            <div class="letter" id="alphabet">E</div>
+            <div class="letter" id="alphabet">R</div>
+            <div class="letter" id="alphabet">T</div>
+            <div class="letter" id="alphabet">Y</div>
+            <div class="letter" id="alphabet">U</div>
+            <div class="letter" id="alphabet">I</div>
+            <div class="letter" id="alphabet">O</div>
+            <div class="letter" id="alphabet">P</div>
+        </div>
+        <div id="container2">
+            <div class="letter" id="alphabet">A</div>
+            <div class="letter" id="alphabet">S</div>
+            <div class="letter" id="alphabet">D</div>
+            <div class="letter" id="alphabet">F</div>
+            <div class="letter" id="alphabet">G</div>
+            <div class="letter" id="alphabet">H</div>
+            <div class="letter" id="alphabet">J</div>
+            <div class="letter" id="alphabet">K</div>
+            <div class="letter" id="alphabet">L</div>
+        </div>
+        <div id="container3">
+            <div class="letter" id="enter">Enter</div>
+            <div class="letter" id="alphabet">Z</div>
+            <div class="letter" id="alphabet">X</div>
+            <div class="letter" id="alphabet">C</div>
+            <div class="letter" id="alphabet">V</div>
+            <div class="letter" id="alphabet">B</div>
+            <div class="letter" id="alphabet">N</div>
+            <div class="letter" id="alphabet">M</div>
+            <div class="letter" id="delete">Delete</div>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript" src="mode1.js"></script>
+</html>

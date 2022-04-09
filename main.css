@@ -1,0 +1,24 @@
+#title{
+    color: blue;
+    font-size: 80px;
+    text-align: center;
+}
+.modes{
+    width: 100%;
+    height: 100%;
+}
+.mode1{
+    width: fit-content;
+    height: fit-content;
+    background-color: yellow;
+    border: 3px solid green;
+    padding: 10px;
+    border-radius: 25px;
+}
+#mode1Title{
+    font-size: 60px;
+}
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+}
