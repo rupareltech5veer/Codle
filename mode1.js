@@ -544,7 +544,7 @@ document.getElementById("infoPopup").addEventListener("click", (event)=> {
 });
 
 document.querySelectorAll('.letter').forEach(item => {
-    item.addEventListener('touchend', event => {
+    item.addEventListener('click', event => {
         //console.log("KeyPressed = ", event);
         document.getElementById("title").style.color = "red";
         if(!infoFlag){
