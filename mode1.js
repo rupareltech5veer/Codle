@@ -543,14 +543,14 @@ document.getElementById("infoPopup").addEventListener("click", (event)=> {
     showPopup();
 });
 
-// document.querySelectorAll('.letter').forEach(item => {
-//     item.addEventListener('click', event => {
-//         //console.log("KeyPressed = ", event);
-//         if(!infoFlag){
-//             fillGuess(event, "btnclick");
-//         }
-//     })
-// });
+document.querySelectorAll('.letter').forEach(item => {
+    item.addEventListener('click', event => {
+        //console.log("KeyPressed = ", event);
+        if(!infoFlag){
+            fillGuess(event, "btnclick");
+        }
+    })
+});
 
 document.getElementById("winLosePopup").addEventListener("click", (event)=> {
     //console.log("clicked");
@@ -602,20 +602,150 @@ document.getElementById("minus").addEventListener("click", (event)=> {
 
 //////////////////Event Listeners And Their Functions////////////////////
 
-document.querySelectorAll('.letter').forEach(item => {
-    item.addEventListener('click', e =>{
-        keyboardEvent(e);
-    }, false);
-    item.addEventListener('touchstart', e =>{
-        keyboardEvent(e);
-    }, false); 
-});
+// document.querySelectorAll('.letter').forEach(item => {
+//     item.addEventListener('click', e =>{
+//         keyboardEvent(e);
+//     }, false);
+//     item.addEventListener('touchstart', e =>{
+//         keyboardEvent(e);
+//     }, false); 
+// });
 
-function keyboardEvent(event){
-    //console.log("KeyPressed = ", event);
-    event.preventDefault();
-    event.stopPropagation();
-    if(!infoFlag){
-        fillGuess(event, "btnclick");
-    }
-}
+// function keyboardEvent(event){
+//     console.log("KeyPressed = ", event);
+//     //event.preventDefault();
+//     //event.stopPropagation();
+//     if(!infoFlag){
+//         fillGuess(event, "btnclick");
+//     }
+// }
+
+// const element = document.querySelector("#myId");
+
+// function handleEvent(e) {
+//     // do something
+// }
+// // I prefer string.split because it makes editing the event list slightly easier
+
+// "click touchstart touchend touchmove".split(" ")
+//     .map(name => element.addEventListener(name, handleEvent, false));
+
+
+
+
+
+///////////////////////////////////////JUNK CODE WHICH I WILL LATER DELETE//////////////////////////////
+
+    
+// $(document).ready(function() { // better to use $(document).ready(function(){
+//     $('.List li').on('click touchstart', function() {
+//         $('.Div').slideDown('500');
+//     });
+// });
+
+
+    // for(c=0; c < guess.length; c++){
+    //     if(correctGuess.indexOf(guess.charAt(c)) != -1){
+    //         //console.log("Letter is in the word!!");
+    //         var cgList = getAllIndexes(correctGuess, guess.charAt(c));
+    //         var gList = getAllIndexes(guess, guess.charAt(c));
+    //         //console.log("HERE ARE THE MAPPING LISTS:");
+    //         //console.log(gList);
+    //         //console.log(cgList);    
+    //         if(cgList.length == gList.length){
+    //             //console.log("SAME!!");
+    //             for(m=0; m < gList.length; m++){
+    //                 //console.log("mapping: ", gList[m], " to ", cgList[m]);
+    //                 if(gList[m] == cgList[m]){
+    //                     blanks_list[c].style.backgroundColor = "green";
+    //                 }
+    //                 else{
+    //                     blanks_list[c].style.backgroundColor = "deeppink";
+    //                 }
+    //             }
+    //         }
+    //         else if(cgList.length > gList.length){
+    //             //console.log("gList is smaller!!");
+    //             for(m=0; m < gList.length; m++){
+    //                 if(gList[m] == cgList[m]){
+    //                     blanks_list[c].style.backgroundColor = "green";
+    //                 }
+    //                 else{
+    //                     blanks_list[c].style.backgroundColor = "deeppink";
+    //                 }
+    //             }
+    //         }
+    //         else{
+    //             //console.log("cgList is smaller!!");
+    //             for(m=0; m < cgList.length; m++){
+    //                 if(gList[m] == cgList[m]){
+    //                     blanks_list[c].style.backgroundColor = "green";
+    //                 }
+    //                 else{
+    //                     blanks_list[c].style.backgroundColor = "deeppink";
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     else{
+    //         //console.log("GREY COLOR :(");
+    //         blanks_list[c].style.backgroundColor = "grey";   
+    //     }
+    // }
+
+
+
+    // for(c=0; c < guess.length; c++){
+    //     if(correctGuess.indexOf(guess.charAt(c)) != -1){
+    //         if(correctGuess.indexOf(guess.charAt(c)) == guess.indexOf(guess.charAt(c))){
+    //             blanks_list[c].style.backgroundColor = "green";                
+    //         }
+    //         else{
+    //             blanks_list[c].style.backgroundColor = "deeppink";
+    //         }
+    //     }
+    //     else{
+    //         blanks_list[c].style.backgroundColor = "grey";   
+    //     }
+    // }
+
+
+    
+// document.body.addEventListener("keyup", fillGuess});
+
+// function removeKeyPress(){
+//     document.body.removeEventListener("keyup", (event)=> {
+//         //console.log("KeyPressed");
+//         fillGuess(event);
+//     });
+// }
+
+// function event(event){
+//     //console.log("KeyPressed");
+//     fillGuess(event);    
+// }
+
+
+// fetch("words.json").then(response => {
+    //     return response.json();
+    // }).then(jsondata => //console.log(jsondata));
+    // var jsondata = await fetch("words.json", { mode: "no-cors" }).then((res) => res.json()).then((data) => //console.log(data));
+    // //console.log(jsondata);
+    //JSON.parse(jsondata);
+
+    // var url = "words.json";         
+    // $.getJSON(url, function (data) {
+    //     $.each(data, function (key, model) {
+    //         //console.log(key);
+    //     })
+    // });
+
+//     fetch('words.json', {mode: 'no-cors'}).then(function(response) {
+//         //console.log(response);
+//         JSON.parse(response);
+//         //console.log(response);
+//   })
+
+    //var wordsDict = JSON.stringify(words);
+
+    //var guessElms =$("[id='blanks']");
