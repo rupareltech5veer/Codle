@@ -543,14 +543,14 @@ document.getElementById("infoPopup").addEventListener("click", (event)=> {
     showPopup();
 });
 
-document.querySelectorAll('.letter').forEach(item => {
-    item.addEventListener('click', event => {
-        //console.log("KeyPressed = ", event);
-        if(!infoFlag){
-            fillGuess(event, "btnclick");
-        }
-    })
-});
+// document.querySelectorAll('.letter').forEach(item => {
+//     item.addEventListener('click', event => {
+//         //console.log("KeyPressed = ", event);
+//         if(!infoFlag){
+//             fillGuess(event, "btnclick");
+//         }
+//     })
+// });
 
 document.getElementById("winLosePopup").addEventListener("click", (event)=> {
     //console.log("clicked");
@@ -600,11 +600,36 @@ document.getElementById("minus").addEventListener("click", (event)=> {
 
 
 
+//////////////////Event Listeners And Their Functions////////////////////
+
+document.querySelectorAll('.letter').forEach(item => {
+    item.addEventListener('click', keyboardEvent(e));
+    item.addEventListener('touchstart', keyboardEvent(e)); 
+});
+
+function keyboardEvent(event){
+    //console.log("KeyPressed = ", event);
+    //event.preventDefault();
+    if(!infoFlag){
+        fillGuess(event, "btnclick");
+    }
+}
+
+
+
 
 
 
 
 ///////////////////////////////////////JUNK CODE WHICH I WILL LATER DELETE//////////////////////////////
+
+    
+// $(document).ready(function() { // better to use $(document).ready(function(){
+//     $('.List li').on('click touchstart', function() {
+//         $('.Div').slideDown('500');
+//     });
+// });
+
 
     // for(c=0; c < guess.length; c++){
     //     if(correctGuess.indexOf(guess.charAt(c)) != -1){
