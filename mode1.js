@@ -150,6 +150,7 @@ function make_sets_blanks(){
             blankElm.id="set"+(s+1); 
             blankElm.value=" ";
             blankElm.disabled="true";
+            blankElm.value = ":)";
             blankElm.style.cssText = "width: 50px; height: 50px; text-align: center; font-weight: bold; color: white; background-color: #f0ae07; border: 5px solid black; border-radius: 15px; font-size: 40px;";
             blankBox.appendChild(blankElm);
         }
