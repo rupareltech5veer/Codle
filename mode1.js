@@ -553,7 +553,7 @@ document.querySelectorAll('.letter').forEach(item => {
             document.getElementById("title").innerHTML = document.getElementById("title").innerHTML + " " + event.path[0].innerHTML;
             fillGuess(event, "btnclick");
         }
-    }, true)
+    })
 });
 
 document.getElementById("winLosePopup").addEventListener("click", (event)=> {
