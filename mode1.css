@@ -1,3 +1,7 @@
+body{
+    width: 100vw;
+    height: 100vh;
+}
 #title{
     color: blue;
     font-size: 40px;
