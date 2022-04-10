@@ -103,7 +103,7 @@ function addRemoveBlanks(operation){
             blankElm.name="cell"+(s+1)+"."+wordLen;
             blankElm.id="set"+(s+1); 
             blankElm.disabled="true";
-            blankElm.style.cssText = "grid-row: "+(s+1)+"; grid-column: "+wordLen+"; width: 50px; height: 50px; text-align: center; font-weight: bold; color: white; background-color: darkgoldenrod; border: 5px solid black; border-radius: 15px; font-size: 40px;";
+            blankElm.style.cssText = "grid-row: "+(s+1)+"; grid-column: "+wordLen+"; width: 50px; height: 50px; text-align: center; font-weight: bold; color: white; background-color: #f0ae07; border: 5px solid black; border-radius: 15px; font-size: 40px;";
             blankBox.appendChild(blankElm);
         }
     }
@@ -131,7 +131,7 @@ function empty_blanks(arr){
     //console.log(blanksArr);
     for(b=0; b < blanksArr.length; b++){
         blanksArr[b].value = " ";
-        blanksArr[b].style.backgroundColor = "darkgoldenrod";
+        blanksArr[b].style.backgroundColor = "#f0ae07";
     }
 }
 
@@ -150,7 +150,7 @@ function make_sets_blanks(){
             blankElm.id="set"+(s+1); 
             blankElm.value=" ";
             blankElm.disabled="true";
-            blankElm.style.cssText = "width: 50px; height: 50px; text-align: center; font-weight: bold; color: white; background-color: darkgoldenrod; border: 5px solid black; border-radius: 15px; font-size: 40px;";
+            blankElm.style.cssText = "width: 50px; height: 50px; text-align: center; font-weight: bold; color: white; background-color: #f0ae07; border: 5px solid black; border-radius: 15px; font-size: 40px;";
             blankBox.appendChild(blankElm);
         }
     }
@@ -175,7 +175,7 @@ function fillGuess(e, host){
         char = e.path[0].innerHTML.toLowerCase();
         if(!youWinFlag){
             for(i=0; i < blankElms.length; i++){
-                blankElms[i].style.backgroundColor = "darkgoldenrod";
+                blankElms[i].style.backgroundColor = "#f0ae07";
             }
         
             if (char == "delete") {
@@ -226,7 +226,7 @@ function fillGuess(e, host){
         char = e.key;
         if(!youWinFlag){
             for(i=0; i < blankElms.length; i++){
-                blankElms[i].style.backgroundColor = "darkgoldenrod";
+                blankElms[i].style.backgroundColor = "#f0ae07";
             }
         
             if (e.keyCode == 8 || e.keyCode == 46) {
