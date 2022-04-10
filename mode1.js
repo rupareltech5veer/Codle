@@ -544,9 +544,11 @@ document.getElementById("infoPopup").addEventListener("click", (event)=> {
 });
 
 document.querySelectorAll('.letter').forEach(item => {
-    item.addEventListener('touchstart', event => {
+    item.addEventListener('touchend', event => {
         //console.log("KeyPressed = ", event);
+        document.getElementById("title").style.color = "red";
         if(!infoFlag){
+            document.getElementById("title").style.color = "blue";
             fillGuess(event, "btnclick");
         }
     }, true)
