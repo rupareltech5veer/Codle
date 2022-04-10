@@ -603,8 +603,12 @@ document.getElementById("minus").addEventListener("click", (event)=> {
 //////////////////Event Listeners And Their Functions////////////////////
 
 document.querySelectorAll('.letter').forEach(item => {
-    item.addEventListener('click', keyboardEvent(e));
-    item.addEventListener('touchstart', keyboardEvent(e)); 
+    item.addEventListener('click', e =>{
+        keyboardEvent(e);
+    });
+    item.addEventListener('touchstart', e =>{
+        keyboardEvent(e);
+    }); 
 });
 
 function keyboardEvent(event){
