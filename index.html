@@ -1,26 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mode1.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CODLE</title>
+    <title>Codle</title>
 </head>
 <body>
-    <h1 id="title">CODLE</h1>
-    <div class="modes" id="modes">
-        <a href="mode1.html" id="mode1Link">
-            <div class="mode1" id="mode1">
-                <h1 id="mode1Title">Word Guesser</h1>
-            </div>
-        </a>
+    <h1 id="title">CODLE Word Guess</h1>
+    <hr id="divider">
+    <div id="emptySpace"></div>
+    <div id="infoPopup">
+        <h1 id="infoTitle">HOW TO PLAY</h1>
+        <div id="ex1">
+            <div class="blankCell" id="diffColor">H</div>
+            <div class="blankCell" id="normalColor">I</div>
+            <div class="blankCell" id="normalColor">P</div>
+            <h1 id="colorInfo">The pink square means that the letter is in the word, but in the wrong spot!</h1>
+        </div>
+        <div id="ex2">
+            <div class="blankCell" id="normalColor">C</div>
+            <div class="blankCell" id="diffColor">O</div>
+            <div class="blankCell" id="normalColor">W</div>
+            <h1 id="colorInfo">The Green square means that the letter is in the word, and in the right spot!</h1>
+        </div>
+        <div id="ex3">
+            <div class="blankCell" id="normalColor">T</div>
+            <div class="blankCell" id="normalColor">A</div>
+            <div class="blankCell" id="diffColor">P</div>
+            <h1 id="colorInfo">The Grey square means that the letter is not in the word!</h1>
+        </div>
     </div>
-    <!-- <div id="temp">
-        <textarea name="addWords" id="addWords"></textarea>
-        <button id="submit">SUBMIT</button>
-    </div>     -->
+    <div id="confettiHolder"></div>
+    <!-- <img id="confettiGif" src="confettiPNG.gif" alt="confetti"> -->
+    <div id="winLosePopup">
+        <h1 id="winMsg"></h1>
+        <h1 id="winWord"></h1>
+        <div id="winStats"></div>
+    </div>
+    <div class="contentWrapper">
+        <div id="wordBoxHead">
+            <h1 id="wordBoxTitle">5 Letter Words</h1>
+            <!-- <div id="wordBoxBtnSpan"><button class="wordBoxBtn" id="add">+</button></div>&nbsp;&nbsp;<span><div id="wordBoxBtnSpan"><button class="wordBoxBtn" id="minus">−</button></div></span> -->
+            &nbsp;&nbsp;&nbsp;<div class="wordBoxBtn" id="add">+</div>
+            &nbsp;<div class="wordBoxBtn" id="minus">−</div>
+        </div>
+        <div class="wordBox" id="wordBox">
+            <div id="invalidPopup"></div>
+    
+            <!--<div class="box" id="box1">
+                <input type="text" id="blank1" name="blank1" pattern="[A-Za-z]" maxlength="1">
+            </div>
+            <div class="box" id="box2">
+            </div>
+            <div class="box" id="box3">L</div>
+            <div class="box" id="box4">L</div>
+            <div class="box" id="box5">O</div> -->
+    
+            <!-- <input type="text" id="blanks" name="set1" pattern="[A-Za-z]" maxlength="1" disabled="true">
+            <input type="text" id="blanks" name="set1" pattern="[A-Za-z]" maxlength="1">
+            <input type="text" id="blanks" name="set1" pattern="[A-Za-z]" maxlength="1">
+            <input type="text" id="blanks" name="set1" pattern="[A-Za-z]" maxlength="1">
+            <input type="text" id="blanks" name="set1" pattern="[A-Za-z]" maxlength="1"> -->
+    
+        </div>
+    </div>
+    
+    <div id="keyboard">
+        <div id="container1">
+            <button class="letter" id="alphabet">Q</button>
+            <button class="letter" id="alphabet">W</button>
+            <button class="letter" id="alphabet">E</button>
+            <button class="letter" id="alphabet">R</button>
+            <button class="letter" id="alphabet">T</button>
+            <button class="letter" id="alphabet">Y</button>
+            <button class="letter" id="alphabet">U</button>
+            <button class="letter" id="alphabet">I</button>
+            <button class="letter" id="alphabet">O</button>
+            <button class="letter" id="alphabet">P</button>
+        </div>
+        <div id="container2">
+            <button class="letter" id="alphabet">A</button>
+            <button class="letter" id="alphabet">S</button>
+            <button class="letter" id="alphabet">D</button>
+            <button class="letter" id="alphabet">F</button>
+            <button class="letter" id="alphabet">G</button>
+            <button class="letter" id="alphabet">H</button>
+            <button class="letter" id="alphabet">J</button>
+            <button class="letter" id="alphabet">K</button>
+            <button class="letter" id="alphabet">L</button>
+        </div>
+        <div id="container3">
+            <button class="letter" id="enter">Enter</button>
+            <button class="letter" id="alphabet">Z</button>
+            <button class="letter" id="alphabet">X</button>
+            <button class="letter" id="alphabet">C</button>
+            <button class="letter" id="alphabet">V</button>
+            <button class="letter" id="alphabet">B</button>
+            <button class="letter" id="alphabet">N</button>
+            <button class="letter" id="alphabet">M</button>
+            <button class="letter" id="delete">Delete</button>
+        </div>
+    </div>
+
 </body>
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="mode1.js"></script>
 </html>
