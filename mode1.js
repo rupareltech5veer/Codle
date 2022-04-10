@@ -613,7 +613,8 @@ document.querySelectorAll('.letter').forEach(item => {
 
 function keyboardEvent(event){
     //console.log("KeyPressed = ", event);
-    //event.preventDefault();
+    event.preventDefault();
+    event.stopPropagation();
     if(!infoFlag){
         fillGuess(event, "btnclick");
     }
