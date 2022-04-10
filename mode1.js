@@ -605,10 +605,10 @@ document.getElementById("minus").addEventListener("click", (event)=> {
 document.querySelectorAll('.letter').forEach(item => {
     item.addEventListener('click', e =>{
         keyboardEvent(e);
-    });
-    item.addEventListener('touchend', e =>{
+    }, false);
+    item.addEventListener('touchstart', e =>{
         keyboardEvent(e);
-    }); 
+    }, false); 
 });
 
 function keyboardEvent(event){
