@@ -544,12 +544,12 @@ document.getElementById("infoPopup").addEventListener("click", (event)=> {
 });
 
 document.querySelectorAll('.letter').forEach(item => {
-    item.addEventListener('click', event => {
+    item.addEventListener('touchstart', event => {
         //console.log("KeyPressed = ", event);
         if(!infoFlag){
             fillGuess(event, "btnclick");
         }
-    })
+    }, true)
 });
 
 document.getElementById("winLosePopup").addEventListener("click", (event)=> {
