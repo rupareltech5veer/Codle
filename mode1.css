@@ -1,6 +1,7 @@
 #title{
     color: blue;
     font-size: 40px;
+    /* font-family: cursive; */
     text-align: center;
     /* margin: 10px 0 35px 0; */
     margin: 0;
@@ -20,6 +21,8 @@
 }
 #wordBoxTitle{
     font-size: 35px;
+    font-family: Lobster, cursive;
+    font-weight: lighter;
     color: darkcyan;
     display: inline;
 }
@@ -153,9 +156,9 @@
     height: fit-content;
     margin: auto;
     font-size: 25px;
-    margin-top: 25px;
+    margin-top: 35px;
     text-align: center;
-    transform: scale(0.75);
+    /* transform: scale(0.9); */
 }
 #container1, #container2, #container3{
     margin-top: 5px;
@@ -181,6 +184,8 @@
     border-radius: 15px;
     /* background-color: darkcyan; */
     background-color: darkslategrey;
+    border: none;
+    font-size: 20px;
 }
 .letter:hover{
     /* border: 7px solid darkcyan; */
