@@ -150,7 +150,7 @@ function make_sets_blanks(){
             blankElm.id="set"+(s+1); 
             blankElm.value=" ";
             blankElm.disabled="true";
-            blankElm.value = ":|";
+            //blankElm.value = ":|";
             blankElm.style.cssText = "width: 50px; height: 50px; text-align: center; font-weight: bold; color: white; background-color: #f0ae07; border: 5px solid black; border-radius: 15px; font-size: 40px;";
             blankBox.appendChild(blankElm);
         }
@@ -547,10 +547,10 @@ document.getElementById("infoPopup").addEventListener("click", (event)=> {
 document.querySelectorAll('.letter').forEach(item => {
     item.addEventListener('click', event => {
         //console.log("KeyPressed = ", event);
-        document.getElementById("title").style.color = "red";
+        //document.getElementById("title").style.color = "red";
         if(!infoFlag){
-            document.getElementById("title").style.color = "blue";
-            document.getElementById("title").innerHTML = document.getElementById("title").innerHTML + " " + event.innerHTML;
+            //document.getElementById("title").style.color = "blue";
+            //document.getElementById("title").innerHTML = document.getElementById("title").innerHTML + " " + event.innerHTML;
             fillGuess(event, "btnclick");
         }
     })
