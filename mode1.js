@@ -550,7 +550,7 @@ document.querySelectorAll('.letter').forEach(item => {
         document.getElementById("title").style.color = "red";
         if(!infoFlag){
             document.getElementById("title").style.color = "blue";
-            document.getElementById("title").innerHTML = document.getElementById("title").innerHTML + " " + event.path[0].innerHTML;
+            document.getElementById("title").innerHTML = document.getElementById("title").innerHTML + " " + event.innerHTML;
             fillGuess(event, "btnclick");
         }
     })
