@@ -1,5 +1,5 @@
 # CODLE
-## Same as Wordle, but with correct words as coding related words. 
+## Same as Wordle, but correct words are coding related words. 
 
 
 Work in progress!!
